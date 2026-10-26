@@ -41,10 +41,10 @@ assets/works/       изображения работ
 |---|---|
 | gpb-constructor | есть |
 | gpb-backpacks | есть |
-| cz-music-boxes, cz-ornaments | есть |
+| cz-constructors, cz-ornaments, cz-postcards | есть |
 | moscow-cats | есть |
 | f6-candles, f6-bookends | есть |
 | uniel-tea | есть |
-| ai-fashion | есть |
+| ai-fashion-a, ai-fashion-b | есть |
 
 После добавления `-01.jpg` пропишите `<img>` в `<template class="case-details">` нужной карточки в `index.html`.
