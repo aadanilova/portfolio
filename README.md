@@ -1,4 +1,4 @@
-# anna-portfolio
+# portfolio
 
 Сайт-портфолио Анны Даниловой, графического дизайнера и AI-креатора: мерч, упаковка, промопродукция и AI-визуал.
 
@@ -21,7 +21,7 @@ assets/works/       изображения работ
 
 1. Settings → Pages.
 2. Source: **Deploy from a branch**, Branch: **main**, папка **/ (root)** → Save.
-3. Через 1–2 минуты сайт будет по адресу https://hlwktt.github.io/anna-portfolio/
+3. Через 1–2 минуты сайт будет по адресу https://aadanilova.github.io/portfolio/
 
 ## Темы
 
