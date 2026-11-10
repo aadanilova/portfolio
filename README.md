@@ -37,7 +37,7 @@ assets/works/       изображения работ
 Контекст работы и инструменты видны только в модалке и задаются атрибутами карточки:
 
 ```html
-<article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop">
+<article class="case" data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop">
 ```
 
 Текст и галерея модалки лежат в `<template class="case__details">` внутри карточки. Классы галереи: `gallery` (одна колонка), `gallery--two` (две колонки), `gallery--grid` (авто-сетка), `gallery--postcards` (2 + 2 + 1 по центру).
