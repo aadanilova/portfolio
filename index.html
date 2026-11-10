@@ -48,7 +48,7 @@
       <a class="logo" href="#top" aria-label="Анна Данилова, в начало страницы">Анна Данилова</a>
       <nav class="nav" aria-label="Основная навигация">
         <ul class="nav__list">
-          <li><a class="nav__link" href="#works">Работы</a></li>
+          <li><a class="nav__link" href="#works">Проекты</a></li>
           <li><a class="nav__link" href="#skills">Навыки</a></li>
           <li><a class="nav__link" href="#experience">Опыт</a></li>
           <li><a class="nav__link" href="#contact">Контакты</a></li>
@@ -81,7 +81,6 @@
             <ul>
               <li><a href="mailto:danilovaa988@gmail.com">danilovaa988@gmail.com</a></li>
               <li><a href="https://hh.ru/resume/fbd364c3ff11444dd10039ed1f4e3279495963" target="_blank" rel="noopener">Резюме на&nbsp;hh.ru&nbsp;↗</a></li>
-              <li>Удалённо</li>
             </ul>
           </div>
         </div>
@@ -90,7 +89,7 @@
           <p class="hero__year"><span class="hero__year-label">Портфолио</span> <span data-year>2026</span></p>
           <p class="hero__spec">Мерч · упаковка · промо · <span class="nowrap">AI-визуал</span></p>
           <div class="hero__actions">
-            <a class="link-arrow" href="#works">Смотреть работы <span aria-hidden="true">→</span></a>
+            <a class="link-arrow" href="#works">Смотреть проекты <span aria-hidden="true">→</span></a>
             <a class="link-arrow" href="#contact">Связаться <span aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -104,11 +103,13 @@
           <span>Портфолио</span>
           <span>01</span>
         </div>
-        <h2 class="display reveal" id="about-title">Знакомство</h2>
+        <h2 class="display reveal" id="about-title">Обо мне</h2>
 
         <div class="about">
+          <!-- Фото: положите файл assets/photo.jpg (рекомендуется 1600×700, до 300 КБ). Пока файла нет, виден плейсхолдер. -->
           <figure class="about__media reveal">
-            <img src="assets/works/cz-constructors-01.jpg" width="1600" height="689" loading="lazy" decoding="async" alt="Музыкальные шкатулки из деталей конструктора: звезда, паровоз и ёлка с подарками" onerror="this.remove()">
+            <span class="about__ph" aria-hidden="true">Здесь будет фото</span>
+            <img src="assets/photo.jpg" width="1600" height="700" loading="lazy" decoding="async" alt="Анна Данилова" onerror="this.remove()">
           </figure>
           <div class="about__text reveal">
             <p class="about__name">Анна Данилова</p>
@@ -162,7 +163,7 @@
           <span>02</span>
         </div>
         <div class="section__head">
-          <h2 class="display reveal" id="works-title">Мои работы</h2>
+          <h2 class="display reveal" id="works-title">Проекты</h2>
           <p class="section__lead reveal">Мерч, сувенирная продукция, упаковка, карточки для&nbsp;маркетплейсов, айдентика и&nbsp;плакаты. Нажмите на&nbsp;проект, чтобы открыть подробности.</p>
         </div>
 
@@ -556,7 +557,7 @@
       </div>
     </section>
 
-    <!-- ============ Опыт и образование ============ -->
+    <!-- ============ Опыт работы ============ -->
     <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <div class="section__bar reveal">
@@ -564,35 +565,44 @@
           <span>04</span>
         </div>
         <div class="section__head">
-          <h2 class="display reveal" id="experience-title">Опыт</h2>
+          <h2 class="display reveal" id="experience-title">Опыт работы</h2>
           <p class="section__lead reveal">2&nbsp;года 8&nbsp;месяцев коммерческого опыта.</p>
         </div>
 
         <ol class="entries">
           <li class="entry reveal">
             <div class="entry__head">
-              <h3 class="entry__title"><span class="nowrap">H-ONE</span>, Москва</h3>
-              <p class="entry__date">(<time datetime="2025-09">сентябрь 2025</time>&nbsp;— <time datetime="2026-10">октябрь 2026</time>)</p>
+              <h3 class="entry__title"><span class="nowrap">H-ONE</span></h3>
+              <p class="entry__date"><time datetime="2025-09">сентябрь 2025</time>&nbsp;— <time datetime="2026-10">октябрь 2026</time></p>
             </div>
             <p class="entry__role">Графический дизайнер (мерч и&nbsp;промопродукция)</p>
             <p>Мерч и&nbsp;промопродукция для&nbsp;корпоративных клиентов: от&nbsp;идей по&nbsp;ТЗ и&nbsp;презентации концепций до&nbsp;макетов к&nbsp;производству и&nbsp;подбора подрядчиков в&nbsp;России и&nbsp;Китае. Проекты для&nbsp;Газпромбанка, Честного знака, Uniel, F6 и&nbsp;Комплекса градостроительной политики и&nbsp;строительства города Москвы.</p>
           </li>
           <li class="entry reveal">
             <div class="entry__head">
-              <h3 class="entry__title">Фриланс (самозанятая)</h3>
-              <p class="entry__date">(<time datetime="2024-03">март 2024</time>&nbsp;— <time datetime="2025-09">сентябрь 2025</time>)</p>
+              <h3 class="entry__title">Фриланс</h3>
+              <p class="entry__date"><time datetime="2024-03">март 2024</time>&nbsp;— <time datetime="2025-09">сентябрь 2025</time></p>
             </div>
             <p class="entry__role">Графический дизайнер (проектная работа)</p>
             <p>Брендинговые агентства, производители и&nbsp;продавцы на&nbsp;Wildberries, Ozon и&nbsp;Яндекс Маркете: карточки и&nbsp;инфографика, <span class="nowrap">AI-образы</span> одежды для&nbsp;карточек, <span class="nowrap">POS-материалы</span>, адаптации упаковки, допечатная подготовка. Работа по&nbsp;брендбукам, в&nbsp;том числе в&nbsp;команде под&nbsp;руководством <span class="nowrap">арт-директора</span>.</p>
           </li>
         </ol>
+      </div>
+    </section>
 
-        <h3 class="display display--sub reveal" id="education-title">Образование</h3>
-        <ul class="entries entries--3" aria-labelledby="education-title">
+    <!-- ============ Образование ============ -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section__bar reveal">
+          <span>Портфолио</span>
+          <span>05</span>
+        </div>
+        <h2 class="display reveal" id="education-title">Образование</h2>
+        <ul class="entries entries--3">
           <li class="entry reveal">
             <div class="entry__head">
               <p class="entry__title">НГЛУ им. Н.А. Добролюбова</p>
-              <p class="entry__date">(2025)</p>
+              <p class="entry__date">2025</p>
             </div>
             <p class="entry__role">Высшее, бакалавриат · Нижний Новгород</p>
             <p>Высшая школа социальных наук. Реклама и&nbsp;связи с&nbsp;общественностью в&nbsp;сфере государственного и&nbsp;муниципального управления.</p>
@@ -600,7 +610,7 @@
           <li class="entry reveal">
             <div class="entry__head">
               <p class="entry__title">Skillbox</p>
-              <p class="entry__date">(2025)</p>
+              <p class="entry__date">2025</p>
             </div>
             <p class="entry__role">Повышение квалификации</p>
             <p>Курс «Профессия графический дизайнер 2.0».</p>
@@ -616,28 +626,14 @@
       </div>
     </section>
 
-    <!-- ============ Как собрано ============ -->
-    <section class="section section--tight" id="how" aria-labelledby="how-title">
-      <div class="container how reveal">
-        <h2 class="label" id="how-title">Как&nbsp;собрано это&nbsp;портфолио</h2>
-        <p class="how__lead">Сайт собран в&nbsp;диалоге с&nbsp;Claude&nbsp;— <span class="nowrap">ИИ-ассистентом</span> от&nbsp;Anthropic. Бриф, структура и&nbsp;правки&nbsp;— мои, код написал Claude Code: чистые HTML, CSS и&nbsp;немного JavaScript, без&nbsp;конструкторов и&nbsp;шаблонов.</p>
-        <ol class="how__steps">
-          <li><span>01</span> Бриф</li>
-          <li><span>02</span> Промпт</li>
-          <li><span>03</span> Итерации</li>
-          <li><span>04</span> GitHub Pages</li>
-        </ol>
-      </div>
-    </section>
-
     <!-- ============ Контакты ============ -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section__bar reveal">
           <span>Портфолио</span>
-          <span>05</span>
+          <span>06</span>
         </div>
-        <h2 class="display reveal" id="contact-title">Связаться</h2>
+        <h2 class="display reveal" id="contact-title">Контакты</h2>
         <p class="contact__lead reveal">Превращаю задачу в&nbsp;понятный и&nbsp;аккуратный визуал.</p>
         <ul class="contact__links reveal">
           <li><a class="contact__link" href="mailto:danilovaa988@gmail.com"><span class="label">Почта</span><span class="contact__value">danilovaa988@gmail.com</span><span class="contact__arrow" aria-hidden="true">→</span></a></li>
