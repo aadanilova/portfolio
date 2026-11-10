@@ -540,7 +540,11 @@ button {
   display: inline;
 }
 
-.clients__list li:not(:last-child)::after {
+.clients__list .clients__long {
+  display: block;
+}
+
+.clients__list li:nth-last-child(n+3)::after {
   content: "/";
   margin-inline: 0.5em;
   color: var(--muted);
