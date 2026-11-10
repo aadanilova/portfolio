@@ -542,6 +542,7 @@ button {
 
 .clients__list .clients__long {
   display: block;
+  text-wrap: balance;
 }
 
 .clients__list li:nth-last-child(n+3)::after {
