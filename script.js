@@ -1,27 +1,24 @@
-/* Портфолио Анны Даниловой: тема, шапка, появление секций, счётчики, tilt карточек, модалка проектов.
+/* Портфолио Анны Даниловой: тема, шапка, появление секций, счётчики, модалка проектов.
    Vanilla JS без зависимостей. Каждая часть работает независимо и не ломает страницу без JS. */
 (function () {
   'use strict';
 
   var root = document.documentElement;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 
   initTheme();
   initYear();
   initHeader();
   initReveal();
-  initTilt();
   initModal();
 
-  /* ---------- Тема: светлая / тёмная ---------- */
+  /* ---------- Тема: по умолчанию тёмная, светлая — по кнопке ---------- */
   function initTheme() {
     var toggle = document.querySelector('[data-theme-toggle]');
     if (!toggle) return;
 
     function current() {
-      return root.dataset.theme || (prefersDark.matches ? 'dark' : 'light');
+      return root.dataset.theme === 'light' ? 'light' : 'dark';
     }
 
     function syncLabel() {
@@ -37,7 +34,6 @@
       syncLabel();
     });
 
-    if (prefersDark.addEventListener) prefersDark.addEventListener('change', syncLabel);
     syncLabel();
   }
 
@@ -107,36 +103,6 @@
       var t = Math.min((ts - start) / duration, 1);
       renderCount(el, Math.round(target * (1 - Math.pow(1 - t, 3))));
       if (t < 1) window.requestAnimationFrame(step);
-    });
-  }
-
-  /* ---------- Tilt карточек + лёгкий параллакс картинки ---------- */
-  function initTilt() {
-    document.querySelectorAll('[data-tilt]').forEach(function (card) {
-      var frame = null;
-
-      card.addEventListener('pointermove', function (e) {
-        if (reduceMotion.matches || !finePointer.matches) return;
-        var rect = card.getBoundingClientRect();
-        var x = (e.clientX - rect.left) / rect.width - 0.5;
-        var y = (e.clientY - rect.top) / rect.height - 0.5;
-        if (frame) window.cancelAnimationFrame(frame);
-        frame = window.requestAnimationFrame(function () {
-          card.classList.add('is-tilting');
-          card.style.setProperty('--rx', (-y * 5).toFixed(2) + 'deg');
-          card.style.setProperty('--ry', (x * 6).toFixed(2) + 'deg');
-          card.style.setProperty('--px', (-x * 10).toFixed(1) + 'px');
-          card.style.setProperty('--py', (-y * 10).toFixed(1) + 'px');
-        });
-      });
-
-      card.addEventListener('pointerleave', function () {
-        if (frame) window.cancelAnimationFrame(frame);
-        card.classList.remove('is-tilting');
-        ['--rx', '--ry', '--px', '--py'].forEach(function (prop) {
-          card.style.removeProperty(prop);
-        });
-      });
     });
   }
 
