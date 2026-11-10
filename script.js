@@ -140,27 +140,50 @@
     });
   }
 
-  /* ---------- Модалка проекта ---------- */
+  /* ---------- Модалка проекта ----------
+     Карточка: заголовок — компания (или тип работы), описание — проект.
+     Контекст работы (H-ONE, Фриланс, Skillbox) и инструменты лежат в data-context / data-tools
+     и показываются только в модалке. */
   function initModal() {
     var modal = document.getElementById('case-modal');
     if (!modal || typeof modal.showModal !== 'function') return;
 
-    var typeEl = modal.querySelector('[data-modal-type]');
+    var contextEl = modal.querySelector('[data-modal-context]');
     var titleEl = modal.querySelector('[data-modal-title]');
+    var subEl = modal.querySelector('[data-modal-sub]');
     var metaEl = modal.querySelector('[data-modal-meta]');
+    var toolsEl = modal.querySelector('[data-modal-tools]');
     var contentEl = modal.querySelector('[data-modal-content]');
     var closeBtn = modal.querySelector('[data-close]');
     var lastTrigger = null;
 
+    // «H-ONE · мерч» → части не рвутся внутри, перенос только между ними
+    function renderContext(text) {
+      var fragment = document.createDocumentFragment();
+      text.split(' · ').forEach(function (part, i) {
+        if (i) fragment.appendChild(document.createTextNode(' · '));
+        var span = document.createElement('span');
+        span.className = 'nowrap';
+        span.textContent = part;
+        fragment.appendChild(span);
+      });
+      contextEl.replaceChildren(fragment);
+      contextEl.hidden = !text;
+    }
+
     function open(button) {
       var card = button.closest('.case');
-      var group = button.closest('.group');
-      if (!card || !group) return;
+      if (!card) return;
       lastTrigger = button;
 
-      typeEl.textContent = group.querySelector('.group__title').textContent;
+      var desc = card.querySelector('.case__desc');
+      var tools = card.dataset.tools || '';
+      renderContext(card.dataset.context || '');
       titleEl.textContent = button.textContent;
-      metaEl.replaceChildren(group.querySelector('.group__meta').cloneNode(true));
+      subEl.textContent = desc ? desc.textContent : '';
+      subEl.hidden = !desc;
+      toolsEl.textContent = tools;
+      metaEl.hidden = !tools;
 
       var fragment = document.createDocumentFragment();
       var tpl = card.querySelector('template.case__details');

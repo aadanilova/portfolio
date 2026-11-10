@@ -31,20 +31,31 @@ assets/works/       изображения работ
 
 В текстах после коротких предлогов и союзов стоят неразрывные пробелы (`&nbsp;`), чтобы они не висели в конце строки. При правке текстов сохраняйте это правило.
 
+## Карточки работ
+
+Все проекты лежат одной сеткой `.cases` в секции `#works`. В карточке заголовок — компания (или тип работы, если компании нет), описание — сам проект.
+Контекст работы и инструменты видны только в модалке и задаются атрибутами карточки:
+
+```html
+<article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop">
+```
+
+Текст и галерея модалки лежат в `<template class="case__details">` внутри карточки. Классы галереи: `gallery` (одна колонка), `gallery--two` (две колонки), `gallery--grid` (авто-сетка), `gallery--postcards` (2 + 2 + 1 по центру).
+
 ## Изображения работ
 
 Обложка проекта: `assets/works/<slug>.jpg`, 1600×1200, JPG до 300 КБ.
-Большое фото в модалке: `assets/works/<slug>-01.jpg`, длинная сторона до 1600 px.
+Фото в модалке: `assets/works/<slug>-01.jpg`, `-02.jpg` и так далее, длинная сторона до 1600 px.
 Пока файла нет, карточка показывает CSS-плейсхолдер.
 
-| slug | статус |
+| slug | карточка |
 |---|---|
-| gpb-constructor | есть |
-| gpb-backpacks | есть |
-| cz-constructors, cz-ornaments, cz-postcards | есть |
-| moscow-cats | есть |
-| f6-candles, f6-bookends | есть |
-| uniel-tea | есть |
-| ai-fashion-a, ai-fashion-b | есть |
-
-После добавления `-01.jpg` пропишите `<img>` в `<template class="case-details">` нужной карточки в `index.html`.
+| gpb-constructor, gpb-backpacks | Газпромбанк |
+| cz-constructors, cz-roly-poly, cz-ornaments, cz-postcards | Честный знак |
+| moscow-cats | Комплекс градостроительной политики и строительства города Москвы |
+| f6-candles, f6-bookends | F6 |
+| uniel-tea | Uniel |
+| modulbank | Модульбанк (учебный проект Skillbox) |
+| jeans, sweater | карточки товара для маркетплейса (фриланс) |
+| ai-fashion-a, ai-fashion-b | AI-образы одежды (фриланс) |
+| posters | плакаты (учебные работы) |

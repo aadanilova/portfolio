@@ -148,315 +148,354 @@
     </section>
 
     <!-- ============ Проекты ============ -->
-    <!-- NDA: публикация материалов клиентов требует проверки NDA. Проекты подаются как работа дизайнера, а не как публичные кейсы. -->
+    <!-- NDA: публикация материалов клиентов требует проверки NDA. Проекты подаются как работа дизайнера, а не как публичные кейсы.
+         Карточки общей сеткой: заголовок — компания (или тип работы), описание — проект.
+         Контекст (H-ONE, Фриланс, Skillbox) и инструменты — в data-context / data-tools, показываются только в модалке. -->
     <section class="section works" id="works" aria-labelledby="works-title">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Портфолио</p>
           <h2 class="section-head__title" id="works-title">Проекты для&nbsp;брендов</h2>
-          <p class="section-head__lead">Мерч, сувенирная продукция, упаковка и&nbsp;<span class="nowrap">AI-визуал</span> для&nbsp;корпоративных и&nbsp;государственных заказчиков. Нажмите на&nbsp;проект, чтобы открыть подробности.</p>
+          <p class="section-head__lead">Мерч, сувенирная продукция, упаковка, карточки для&nbsp;маркетплейсов, айдентика и&nbsp;плакаты. Нажмите на&nbsp;проект, чтобы открыть подробности: инструменты и&nbsp;контекст работы указаны внутри.</p>
         </header>
 
-        <div class="groups">
+        <ul class="cases" data-stagger>
           <!-- Газпромбанк -->
-          <article class="group" aria-labelledby="g-gpb">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context"><span class="nowrap">H-ONE</span> · мерч</p>
-                <h3 class="group__title" id="g-gpb">Газпромбанк</h3>
-                <p class="group__desc">Брендированный мерч для&nbsp;банка: от&nbsp;идеи по&nbsp;ТЗ до&nbsp;макетов к&nbsp;производству.</p>
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Конструктор</span>
+                <img src="assets/works/gpb-constructor.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Дерево из деталей конструктора в синем горшке с логотипом Газпромбанка" onerror="this.remove()">
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Illustrator, Photoshop, ChatGPT</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Конструктор</span>
-                    <img src="assets/works/gpb-constructor.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Дерево из деталей конструктора в синем горшке с логотипом Газпромбанка" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Брендированный конструктор</button></h4>
-                    <p class="case__desc">Полная разработка дизайна конструктора, аналога LEGO.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Полная разработка дизайна брендированного конструктора (аналог LEGO): дерево в&nbsp;горшке с&nbsp;фирменным знаком банка.</p>
-                    <div class="gallery">
-                      <img src="assets/works/gpb-constructor-01.jpg" width="672" height="910" loading="lazy" decoding="async" alt="Брендированный конструктор Газпромбанка: дерево из деталей в синем горшке с логотипом" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Рюкзаки</span>
-                    <img src="assets/works/gpb-backpacks.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Синий рюкзак с кожаными ремешками и нашивкой Газпромбанка" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog"><span class="nowrap">Мерч-рюкзаки</span></button></h4>
-                    <p class="case__desc">Дизайн брендированного рюкзака с&nbsp;кожаной нашивкой.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Дизайн <span class="nowrap">мерч-рюкзака</span>: синий текстиль, коричневые ремешки с&nbsp;пряжками и&nbsp;кожаная нашивка с&nbsp;логотипом банка.</p>
-                    <div class="gallery">
-                      <img src="assets/works/gpb-backpacks-01.jpg" width="1040" height="1214" loading="lazy" decoding="async" alt="Мерч-рюкзак Газпромбанка: синий текстиль, коричневые ремешки и кожаная нашивка с логотипом" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Газпромбанк</button></h3>
+                <p class="case__desc">Брендированный конструктор</p>
+              </div>
+              <template class="case__details">
+                <p>Полная разработка дизайна брендированного конструктора (аналог LEGO): дерево в&nbsp;горшке с&nbsp;фирменным знаком банка.</p>
+                <div class="gallery">
+                  <img src="assets/works/gpb-constructor-01.jpg" width="672" height="910" loading="lazy" decoding="async" alt="Брендированный конструктор Газпромбанка: дерево из деталей в синем горшке с логотипом" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Газпромбанк -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Рюкзаки</span>
+                <img src="assets/works/gpb-backpacks.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Синий рюкзак с кожаными ремешками и нашивкой Газпромбанка" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Газпромбанк</button></h3>
+                <p class="case__desc"><span class="nowrap">Мерч-рюкзаки</span></p>
+              </div>
+              <template class="case__details">
+                <p>Дизайн <span class="nowrap">мерч-рюкзака</span>: синий текстиль, коричневые ремешки с&nbsp;пряжками и&nbsp;кожаная нашивка с&nbsp;логотипом банка.</p>
+                <div class="gallery">
+                  <img src="assets/works/gpb-backpacks-01.jpg" width="1040" height="1214" loading="lazy" decoding="async" alt="Мерч-рюкзак Газпромбанка: синий текстиль, коричневые ремешки и кожаная нашивка с логотипом" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
           <!-- Честный знак -->
-          <article class="group" aria-labelledby="g-cz">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context"><span class="nowrap">H-ONE</span> · мерч и&nbsp;полиграфия</p>
-                <h3 class="group__title" id="g-cz">Честный знак</h3>
-                <p class="group__desc">Новогодний мерч и&nbsp;полиграфия в&nbsp;фирменной <span class="nowrap">жёлто-серой</span> гамме: от&nbsp;идей по&nbsp;ТЗ и&nbsp;визуализации до&nbsp;предпечатной подготовки.</p>
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Конструкторы</span>
+                <img src="assets/works/cz-constructors.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Наборы из деталей конструктора в жёлто-серой гамме: музыкальные шкатулки, офис и карусель" onerror="this.remove()">
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Illustrator, Photoshop, Nano Banana, ChatGPT</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Конструкторы</span>
-                    <img src="assets/works/cz-constructors.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Наборы из деталей конструктора в жёлто-серой гамме: музыкальные шкатулки, офис и карусель" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog"><span class="nowrap">Наборы-конструкторы</span></button></h4>
-                    <p class="case__desc">Две серии: музыкальные шкатулки и&nbsp;сюжетные наборы с&nbsp;логотипом бренда.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Две серии новогодних наборов из&nbsp;деталей конструктора в&nbsp;фирменной <span class="nowrap">жёлто-серой</span> гамме. Музыкальные шкатулки: звезда, паровоз, ёлка и&nbsp;карусель. Сюжетный набор: офис «Честного знака» с&nbsp;грузовиком и&nbsp;шлагбаумом. Логотип бренда на&nbsp;корпусах шкатулок и&nbsp;в&nbsp;деталях композиций.</p>
-                    <div class="gallery">
-                      <img src="assets/works/cz-constructors-01.jpg" width="1600" height="689" loading="lazy" decoding="async" alt="Музыкальные шкатулки из деталей конструктора: звезда, паровоз и ёлка с подарками" onerror="this.remove()">
-                      <img src="assets/works/cz-constructors-02.jpg" width="1600" height="689" loading="lazy" decoding="async" alt="Набор-конструктор: офис «Честного знака» с грузовиком, рядом музыкальная шкатулка-карусель" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Ёлочные игрушки</span>
-                    <img src="assets/works/cz-ornaments.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Шесть ёлочных игрушек в жёлто-серой гамме" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Коллекция ёлочных игрушек</button></h4>
-                    <p class="case__desc">Шесть игрушек с&nbsp;узнаваемыми образами и&nbsp;фирменным знаком.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Коллекция из&nbsp;шести ёлочных игрушек: бутылка, носок, <span class="nowrap">лошадка-качалка</span>, <span class="nowrap">шапка-ушанка</span>, рожок мороженого и&nbsp;банка икры. Каждая игрушка несёт фирменный знак и&nbsp;держится в&nbsp;общей <span class="nowrap">жёлто-серой</span> палитре бренда.</p>
-                    <div class="gallery">
-                      <img src="assets/works/cz-ornaments-01.jpg" width="1518" height="1088" loading="lazy" decoding="async" alt="Шесть ёлочных игрушек: бутылка, носок, лошадка, шапка-ушанка, рожок мороженого и банка икры" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Открытки</span>
-                    <img src="assets/works/cz-postcards.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Пять открыток «Честные в Русской Арктике» с арктическими пейзажами и логотипом бренда" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Набор открыток</button></h4>
-                    <p class="case__desc">Пять открыток «Честные в&nbsp;Русской Арктике»: реализованный проект, включая предпечатную подготовку.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Реализованный проект: набор из&nbsp;пяти открыток «Честные в&nbsp;Русской Арктике» с&nbsp;пейзажами Арктики и&nbsp;фирменным знаком. Единая система на&nbsp;всех открытках: логотип, надпись и&nbsp;спокойная типографика поверх фотографии. Дизайн набора и&nbsp;предпечатная подготовка файлов для&nbsp;типографии.</p>
-                    <div class="gallery gallery--postcards">
-                      <img src="assets/works/cz-postcards-01.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: горы в закатном свете над озером, надпись «Честные в Русской Арктике»" onerror="this.remove()">
-                      <img src="assets/works/cz-postcards-02.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: река среди плато на рассвете, надпись «Честные в Русской Арктике»" onerror="this.remove()">
-                      <img src="assets/works/cz-postcards-04.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: синее озеро среди гор, надпись «Честные в Русской Арктике»" onerror="this.remove()">
-                      <img src="assets/works/cz-postcards-05.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: долина между плато под облачным небом, надпись «Честные в Русской Арктике»" onerror="this.remove()">
-                      <img class="gallery__center" src="assets/works/cz-postcards-03.jpg" width="1135" height="1600" loading="lazy" decoding="async" alt="Вертикальная открытка: заснеженные плато, надпись «Честные в Русской Арктике»" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Честный знак</button></h3>
+                <p class="case__desc"><span class="nowrap">Наборы-конструкторы</span></p>
+              </div>
+              <template class="case__details">
+                <p>Две серии новогодних наборов из&nbsp;деталей конструктора в&nbsp;фирменной <span class="nowrap">жёлто-серой</span> гамме. Музыкальные шкатулки: звезда, паровоз, ёлка и&nbsp;карусель. Сюжетный набор: офис «Честного знака» с&nbsp;грузовиком и&nbsp;шлагбаумом. Логотип бренда на&nbsp;корпусах шкатулок и&nbsp;в&nbsp;деталях композиций.</p>
+                <div class="gallery">
+                  <img src="assets/works/cz-constructors-01.jpg" width="1600" height="689" loading="lazy" decoding="async" alt="Музыкальные шкатулки из деталей конструктора: звезда, паровоз и ёлка с подарками" onerror="this.remove()">
+                  <img src="assets/works/cz-constructors-02.jpg" width="1600" height="689" loading="lazy" decoding="async" alt="Набор-конструктор: офис «Честного знака» с грузовиком, рядом музыкальная шкатулка-карусель" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Честный знак -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Неваляшка</span>
+                <img src="assets/works/cz-roly-poly.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Жёлтая неваляшка с росписью «С любовью из России» и подарочная коробка с ней" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Честный знак</button></h3>
+                <p class="case__desc">Сувенирная неваляшка</p>
+              </div>
+              <template class="case__details">
+                <p>Визуализация сувенирной неваляшки «С&nbsp;любовью из&nbsp;России» в&nbsp;фирменной <span class="nowrap">жёлто-серой</span> гамме: роспись с&nbsp;растительным орнаментом и&nbsp;знак «Честного знака» на&nbsp;корпусе. Подарочная коробка с&nbsp;выдвижным ящиком повторяет надпись и&nbsp;орнамент.</p>
+                <div class="gallery gallery--two">
+                  <img src="assets/works/cz-roly-poly-01.jpg" width="1023" height="1537" loading="lazy" decoding="async" alt="Неваляшка в жёлтой подарочной коробке с выдвижным ящиком и надписью «С любовью из России»" onerror="this.remove()">
+                  <img src="assets/works/cz-roly-poly-02.jpg" width="1023" height="1537" loading="lazy" decoding="async" alt="Жёлтая неваляшка с серой росписью, знаком «Честного знака» и надписью «С любовью из России»" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Честный знак -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · мерч" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Ёлочные игрушки</span>
+                <img src="assets/works/cz-ornaments.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Шесть ёлочных игрушек в жёлто-серой гамме" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Честный знак</button></h3>
+                <p class="case__desc">Коллекция ёлочных игрушек</p>
+              </div>
+              <template class="case__details">
+                <p>Коллекция из&nbsp;шести ёлочных игрушек: бутылка, носок, <span class="nowrap">лошадка-качалка</span>, <span class="nowrap">шапка-ушанка</span>, рожок мороженого и&nbsp;банка икры. Каждая игрушка несёт фирменный знак и&nbsp;держится в&nbsp;общей <span class="nowrap">жёлто-серой</span> палитре бренда.</p>
+                <div class="gallery">
+                  <img src="assets/works/cz-ornaments-01.jpg" width="1518" height="1088" loading="lazy" decoding="async" alt="Шесть ёлочных игрушек: бутылка, носок, лошадка, шапка-ушанка, рожок мороженого и банка икры" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Честный знак -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · полиграфия" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Открытки</span>
+                <img src="assets/works/cz-postcards.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Пять открыток «Честные в Русской Арктике» с арктическими пейзажами и логотипом бренда" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Честный знак</button></h3>
+                <p class="case__desc">Набор открыток</p>
+              </div>
+              <template class="case__details">
+                <p>Реализованный проект: набор из&nbsp;пяти открыток «Честные в&nbsp;Русской Арктике» с&nbsp;пейзажами Арктики и&nbsp;фирменным знаком. Единая система на&nbsp;всех открытках: логотип, надпись и&nbsp;спокойная типографика поверх фотографии. Дизайн набора и&nbsp;предпечатная подготовка файлов для&nbsp;типографии.</p>
+                <div class="gallery gallery--postcards">
+                  <img src="assets/works/cz-postcards-01.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: горы в закатном свете над озером, надпись «Честные в Русской Арктике»" onerror="this.remove()">
+                  <img src="assets/works/cz-postcards-02.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: река среди плато на рассвете, надпись «Честные в Русской Арктике»" onerror="this.remove()">
+                  <img src="assets/works/cz-postcards-04.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: синее озеро среди гор, надпись «Честные в Русской Арктике»" onerror="this.remove()">
+                  <img src="assets/works/cz-postcards-05.jpg" width="1600" height="1135" loading="lazy" decoding="async" alt="Открытка: долина между плато под облачным небом, надпись «Честные в Русской Арктике»" onerror="this.remove()">
+                  <img class="gallery__center" src="assets/works/cz-postcards-03.jpg" width="1135" height="1600" loading="lazy" decoding="async" alt="Вертикальная открытка: заснеженные плато, надпись «Честные в Русской Арктике»" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
           <!-- Комплекс градостроительной политики и строительства города Москвы -->
-          <article class="group" aria-labelledby="g-mos">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context"><span class="nowrap">H-ONE</span> · сувенирная продукция</p>
-                <h3 class="group__title group__title--long" id="g-mos">Комплекс градостроительной политики и&nbsp;строительства города Москвы</h3>
-                <p class="group__desc">Сувенирные статуэтки в&nbsp;виде котов в&nbsp;строительной экипировке.</p>
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · сувенирная продукция" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true"><span class="nowrap">Коты-строители</span></span>
+                <img src="assets/works/moscow-cats.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Четыре статуэтки котов в красных строительных касках с инструментами" onerror="this.remove()">
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Illustrator, Photoshop, Nano Banana, ChatGPT</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true"><span class="nowrap">Коты-строители</span></span>
-                    <img src="assets/works/moscow-cats.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Четыре статуэтки котов в красных строительных касках с инструментами" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Статуэтки «<span class="nowrap">Коты-строители</span>»</button></h4>
-                    <p class="case__desc">Четыре характера: каски с&nbsp;эмблемой и&nbsp;инструменты в&nbsp;лапах.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Серия статуэток в&nbsp;виде котов в&nbsp;строительной экипировке: красные каски с&nbsp;эмблемой заказчика, у&nbsp;каждого кота свой инструмент&nbsp;— молоток, отвёртка, гаечный ключ и&nbsp;дрель.</p>
-                    <div class="gallery">
-                      <img src="assets/works/moscow-cats-01.jpg" width="1310" height="1201" loading="lazy" decoding="async" alt="Четыре керамические статуэтки котов в красных касках: с молотком, отвёрткой, гаечным ключом и дрелью" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Комплекс градостроительной политики и&nbsp;строительства города Москвы</button></h3>
+                <p class="case__desc">Статуэтки «<span class="nowrap">Коты-строители</span>»</p>
+              </div>
+              <template class="case__details">
+                <p>Серия статуэток в&nbsp;виде котов в&nbsp;строительной экипировке: красные каски с&nbsp;эмблемой заказчика, у&nbsp;каждого кота свой инструмент&nbsp;— молоток, отвёртка, гаечный ключ и&nbsp;дрель.</p>
+                <div class="gallery">
+                  <img src="assets/works/moscow-cats-01.jpg" width="1310" height="1201" loading="lazy" decoding="async" alt="Четыре керамические статуэтки котов в красных касках: с молотком, отвёрткой, гаечным ключом и дрелью" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
           <!-- F6 -->
-          <article class="group" aria-labelledby="g-f6">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context"><span class="nowrap">H-ONE</span> · новогодние сувениры</p>
-                <h3 class="group__title" id="g-f6">F6</h3>
-                <p class="group__desc">Новогодняя сувенирная продукция: подсвечники и&nbsp;подставки.</p>
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · новогодние сувениры" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Подсвечники</span>
+                <img src="assets/works/f6-candles.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Два подсвечника-фигурки в фиолетово-белой гамме на фоне подарочной коробки F6" onerror="this.remove()">
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Illustrator, Photoshop, Nano Banana, ChatGPT</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Подсвечники</span>
-                    <img src="assets/works/f6-candles.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Два подсвечника-фигурки в фиолетово-белой гамме на фоне подарочной коробки F6" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog"><span class="nowrap">Подсвечники-фигурки</span></button></h4>
-                    <p class="case__desc">Персонажи в&nbsp;фирменном фиолетовом цвете держат свечу.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Подсвечники в&nbsp;виде фигурок сотрудников в&nbsp;фирменном фиолетовом: один держит свечу над&nbsp;головой, другая несёт ноутбук, книги и&nbsp;кофе. Набор упакован в&nbsp;чёрную подарочную коробку с&nbsp;золотым логотипом.</p>
-                    <div class="gallery">
-                      <img src="assets/works/f6-candles-01.jpg" width="822" height="1296" loading="lazy" decoding="async" alt="Подсвечники-фигурки F6: парень держит свечу над головой, девушка с ноутбуком и книгами; за ними подарочная коробка" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Подставки</span>
-                    <img src="assets/works/f6-bookends.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Подставки для книг в виде среза камня с буквами F и 6" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Подставки для&nbsp;книг</button></h4>
-                    <p class="case__desc">Срез камня, разделённый книгой на&nbsp;F и&nbsp;6.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Пара подставок для&nbsp;книг в&nbsp;виде среза камня: книга между ними складывает буквы в&nbsp;название компании&nbsp;— F и&nbsp;6.</p>
-                    <div class="gallery">
-                      <img src="assets/works/f6-bookends-01.jpg" width="1040" height="1048" loading="lazy" decoding="async" alt="Подставки для книг в виде среза камня с буквами F и 6, между ними стоит книга" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">F6</button></h3>
+                <p class="case__desc"><span class="nowrap">Подсвечники-фигурки</span></p>
+              </div>
+              <template class="case__details">
+                <p>Подсвечники в&nbsp;виде фигурок сотрудников в&nbsp;фирменном фиолетовом: один держит свечу над&nbsp;головой, другая несёт ноутбук, книги и&nbsp;кофе. Набор упакован в&nbsp;чёрную подарочную коробку с&nbsp;золотым логотипом.</p>
+                <div class="gallery">
+                  <img src="assets/works/f6-candles-01.jpg" width="822" height="1296" loading="lazy" decoding="async" alt="Подсвечники-фигурки F6: парень держит свечу над головой, девушка с ноутбуком и книгами; за ними подарочная коробка" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- F6 -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · новогодние сувениры" data-tools="Illustrator, Photoshop, Nano Banana, ChatGPT">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Подставки</span>
+                <img src="assets/works/f6-bookends.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Подставки для книг в виде среза камня с буквами F и 6" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">F6</button></h3>
+                <p class="case__desc">Подставки для&nbsp;книг</p>
+              </div>
+              <template class="case__details">
+                <p>Пара подставок для&nbsp;книг в&nbsp;виде среза камня: книга между ними складывает буквы в&nbsp;название компании&nbsp;— F и&nbsp;6.</p>
+                <div class="gallery">
+                  <img src="assets/works/f6-bookends-01.jpg" width="1040" height="1048" loading="lazy" decoding="async" alt="Подставки для книг в виде среза камня с буквами F и 6, между ними стоит книга" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
           <!-- Uniel -->
-          <article class="group" aria-labelledby="g-uniel">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context"><span class="nowrap">H-ONE</span> · упаковка</p>
-                <h3 class="group__title" id="g-uniel">Uniel</h3>
-                <p class="group__desc">Дизайн линейки упаковок для&nbsp;чая.</p>
+          <li class="reveal">
+            <article class="case" data-tilt data-context="H-ONE · упаковка" data-tools="Illustrator, Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Uniel · чай</span>
+                <img src="assets/works/uniel-tea.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Синяя упаковка-подушечка «Uniel. Коллекция чая» с белыми листьями" onerror="this.remove()">
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Illustrator, Photoshop</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Uniel · чай</span>
-                    <img src="assets/works/uniel-tea.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Синяя упаковка-подушечка «Uniel. Коллекция чая» с белыми листьями" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Линейка упаковок для&nbsp;чая</button></h4>
-                    <p class="case__desc">«Коллекция чая»: фирменный синий и&nbsp;графика листьев.</p>
-                  </div>
-                  <template class="case__details">
-                    <p>Дизайн линейки упаковок для&nbsp;чая: <span class="nowrap">упаковка-подушечка</span> в&nbsp;фирменном синем Uniel с&nbsp;линейной графикой чайных листьев и&nbsp;цветов.</p>
-                    <div class="gallery">
-                      <img src="assets/works/uniel-tea-01.jpg" width="1445" height="1600" loading="lazy" decoding="async" alt="Упаковка «Uniel. Коллекция чая»: синий фон, белая линейная графика листьев и цветов" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-
-          <!-- AI-визуал -->
-          <article class="group" aria-labelledby="g-ai">
-            <header class="group__head reveal">
-              <div>
-                <p class="group__context">Фриланс · <span class="nowrap">AI-визуализация</span> для&nbsp;маркетплейсов</p>
-                <h3 class="group__title" id="g-ai"><span class="nowrap">AI-образы</span> одежды для&nbsp;карточек товаров</h3>
-                <p class="group__desc">Коммерческий заказ для&nbsp;карточек товаров на&nbsp;маркетплейсах: из&nbsp;реальных фото одежды собраны сеты образов на&nbsp;<span class="nowrap">AI-моделях</span>. Посадка и&nbsp;силуэт, фактуры тканей, единый свет и&nbsp;студийный фон для&nbsp;всей серии.</p>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Uniel</button></h3>
+                <p class="case__desc">Линейка упаковок для&nbsp;чая</p>
               </div>
-              <dl class="meta group__meta">
-                <div><dt>Инструменты</dt><dd>Nano Banana, ChatGPT, FLUX, Photoshop</dd></div>
-              </dl>
-            </header>
-            <ul class="cases" data-stagger>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Женские образы</span>
-                    <img src="assets/works/ai-fashion-a.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Три AI-образа: женские комплекты на светлом студийном фоне" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Женские образы</button></h4>
-                  </div>
-                  <template class="case__details">
-                    <div class="gallery gallery--grid">
-                      <img src="assets/works/ai-fashion-01.jpg" width="788" height="1400" loading="lazy" decoding="async" alt="Модель в белом платье, кожаной куртке и с сумкой в форме сердца" onerror="this.remove()">
-                      <img src="assets/works/ai-fashion-02.jpg" width="932" height="1400" loading="lazy" decoding="async" alt="Модель в брючном костюме цвета тауп и белой майке" onerror="this.remove()">
-                      <img src="assets/works/ai-fashion-03.jpg" width="1038" height="1400" loading="lazy" decoding="async" alt="Модель в белом костюме, бордовом корсете и с бордовой сумкой" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-              <li class="reveal">
-                <article class="case" data-tilt>
-                  <div class="case__media">
-                    <span class="case__ph" aria-hidden="true">Casual</span>
-                    <img src="assets/works/ai-fashion-b.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Три AI-образа в стиле casual на светлом студийном фоне" onerror="this.remove()">
-                  </div>
-                  <div class="case__body">
-                    <h4 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Casual</button></h4>
-                  </div>
-                  <template class="case__details">
-                    <div class="gallery gallery--grid">
-                      <img src="assets/works/ai-fashion-04.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Модель в коричневом трикотажном кардигане на молнии и чёрной плиссированной юбке" onerror="this.remove()">
-                      <img src="assets/works/ai-fashion-05.jpg" width="864" height="1400" loading="lazy" decoding="async" alt="Модель в бежевом лонгсливе и джинсах на барном стуле" onerror="this.remove()">
-                      <img src="assets/works/ai-fashion-06.jpg" width="1191" height="1321" loading="lazy" decoding="async" alt="Модель в клетчатой рубашке, джинсовых шортах и солнцезащитных очках" onerror="this.remove()">
-                    </div>
-                  </template>
-                </article>
-              </li>
-            </ul>
-          </article>
-        </div>
+              <template class="case__details">
+                <p>Дизайн линейки упаковок для&nbsp;чая: <span class="nowrap">упаковка-подушечка</span> в&nbsp;фирменном синем Uniel с&nbsp;линейной графикой чайных листьев и&nbsp;цветов.</p>
+                <div class="gallery">
+                  <img src="assets/works/uniel-tea-01.jpg" width="1445" height="1600" loading="lazy" decoding="async" alt="Упаковка «Uniel. Коллекция чая»: синий фон, белая линейная графика листьев и цветов" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Модульбанк: учебный проект, компанию работы не указываем -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Skillbox · учебный проект" data-tools="Illustrator, Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Модульбанк</span>
+                <img src="assets/works/modulbank.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Логотип Модульбанка на стене переговорной с оранжевыми креслами" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Модульбанк</button></h3>
+                <p class="case__desc">Ребрендинг: логотип и&nbsp;фирменный стиль</p>
+              </div>
+              <template class="case__details">
+                <p>Учебный проект: ребрендинг <span class="nowrap">онлайн-банка</span> для&nbsp;предпринимателей. Задача&nbsp;— редизайн логотипа и&nbsp;фирменного стиля. Новый логотип и&nbsp;его&nbsp;сокращённая версия, типографика на&nbsp;шрифте Involve, палитра из&nbsp;синего и&nbsp;оранжевого, паттерн из&nbsp;полос и&nbsp;правила его&nbsp;трансформации. Фирменные носители: банковские карты, бейджи и&nbsp;визитки, сайт, плакаты, билборд и&nbsp;корпоративная продукция.</p>
+                <div class="gallery">
+                  <img src="assets/works/modulbank-01.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Логотип Модульбанка на стене переговорной" onerror="this.remove()">
+                  <img src="assets/works/modulbank-02.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Полная версия логотипа с охранным полем" onerror="this.remove()">
+                  <img src="assets/works/modulbank-03.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Сокращённая версия логотипа: буквы М и Б" onerror="this.remove()">
+                  <img src="assets/works/modulbank-04.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Типографика: начертания шрифта Involve для заголовков, подзаголовков и текста" onerror="this.remove()">
+                  <img src="assets/works/modulbank-05.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Цветовая палитра: синий, оранжевый, светло-серый, чёрный и белый" onerror="this.remove()">
+                  <img src="assets/works/modulbank-06.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Паттерн из чередующихся синих и оранжевых полос" onerror="this.remove()">
+                  <img src="assets/works/modulbank-07.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Банковские карты с паттерном и логотипом" onerror="this.remove()">
+                  <img src="assets/works/modulbank-08.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Бейджи и визитки в фирменном стиле" onerror="this.remove()">
+                  <img src="assets/works/modulbank-09.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Сайт банка на экранах ноутбуков" onerror="this.remove()">
+                  <img src="assets/works/modulbank-10.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Плакат «Всегда готовы помочь» в подземном переходе" onerror="this.remove()">
+                  <img src="assets/works/modulbank-11.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Билборд «Удобный онлайн-банк для вашего бизнеса»" onerror="this.remove()">
+                  <img src="assets/works/modulbank-12.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Шопер с паттерном и логотипом" onerror="this.remove()">
+                  <img src="assets/works/modulbank-13.jpg" width="1600" height="900" loading="lazy" decoding="async" alt="Кружка и ежедневник в фирменном стиле" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Карточки товара: джинсы -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Фриланс · маркетплейсы" data-tools="Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Джинсы mom</span>
+                <img src="assets/works/jeans.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Две карточки товара для женских джинсов mom: обложка и детали кроя" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Джинсы mom</button></h3>
+                <p class="case__desc">Карточки товара для&nbsp;маркетплейса</p>
+              </div>
+              <template class="case__details">
+                <p>Серия из&nbsp;четырёх карточек товара для&nbsp;женских джинсов mom: обложка с&nbsp;преимуществами и&nbsp;размерами, посадка и&nbsp;детали кроя, фактура денима и&nbsp;варианты образов. Единая сетка, иконки и&nbsp;спокойная палитра в&nbsp;цвет денима.</p>
+                <div class="gallery gallery--two">
+                  <img src="assets/works/jeans-01.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="Обложка карточки: модель в джинсах mom, преимущества и размеры XS–XL" onerror="this.remove()">
+                  <img src="assets/works/jeans-02.jpg" width="1087" height="1447" loading="lazy" decoding="async" alt="Карточка «Удобный мом-фит»: высокая посадка, удобные карманы, актуальный крой" onerror="this.remove()">
+                  <img src="assets/works/jeans-03.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="Карточка «Качественный деним»: крупный план ткани и свойства" onerror="this.remove()">
+                  <img src="assets/works/jeans-04.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="Карточка «Легко сочетаются»: три образа с джинсами" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Карточки товара: свитер -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Фриланс · маркетплейсы" data-tools="Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Свитер</span>
+                <img src="assets/works/sweater.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Две карточки товара: свитер с геометрическим узором на модели и раскладка изделий" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Свитер</button></h3>
+                <p class="case__desc">Карточки товара для&nbsp;маркетплейса</p>
+              </div>
+              <template class="case__details">
+                <p>Карточки товара для&nbsp;свитера с&nbsp;геометрическим узором: на&nbsp;каждой карточке образ на&nbsp;модели, два вида изделия и&nbsp;крупный план фактуры вязки. Четыре варианта узора в&nbsp;одной серии.</p>
+                <div class="gallery gallery--two">
+                  <img src="assets/works/sweater-01.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="Серый свитер с лавандовыми вставками: модель, два вида изделия и фактура" onerror="this.remove()">
+                  <img src="assets/works/sweater-02.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="Серо-бежевый свитер с геометрическим узором: модель, два вида изделия и фактура" onerror="this.remove()">
+                  <img src="assets/works/sweater-03.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="Бежевый свитер с лавандовыми полосами: модель, два вида изделия и фактура" onerror="this.remove()">
+                  <img src="assets/works/sweater-04.jpg" width="853" height="1280" loading="lazy" decoding="async" alt="Бежевый свитер с лавандовыми кругами: модель, два вида изделия и фактура" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- AI-образы одежды -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Фриланс · маркетплейсы" data-tools="Nano Banana, ChatGPT, FLUX, Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Женские образы</span>
+                <img src="assets/works/ai-fashion-a.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Три AI-образа: женские комплекты на светлом студийном фоне" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog"><span class="nowrap">AI-образы</span> одежды</button></h3>
+                <p class="case__desc">Женские образы</p>
+              </div>
+              <template class="case__details">
+                <p>Коммерческий заказ для&nbsp;карточек товаров на&nbsp;маркетплейсах: из&nbsp;реальных фото одежды собраны сеты образов на&nbsp;<span class="nowrap">AI-моделях</span>. Посадка и&nbsp;силуэт, фактуры тканей, единый свет и&nbsp;студийный фон для&nbsp;всей серии.</p>
+                <div class="gallery gallery--grid">
+                  <img src="assets/works/ai-fashion-01.jpg" width="788" height="1400" loading="lazy" decoding="async" alt="Модель в белом платье, кожаной куртке и с сумкой в форме сердца" onerror="this.remove()">
+                  <img src="assets/works/ai-fashion-02.jpg" width="932" height="1400" loading="lazy" decoding="async" alt="Модель в брючном костюме цвета тауп и белой майке" onerror="this.remove()">
+                  <img src="assets/works/ai-fashion-03.jpg" width="1038" height="1400" loading="lazy" decoding="async" alt="Модель в белом костюме, бордовом корсете и с бордовой сумкой" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- AI-образы одежды -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Фриланс · маркетплейсы" data-tools="Nano Banana, ChatGPT, FLUX, Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Casual</span>
+                <img src="assets/works/ai-fashion-b.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Три AI-образа в стиле casual на светлом студийном фоне" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog"><span class="nowrap">AI-образы</span> одежды</button></h3>
+                <p class="case__desc">Образы casual</p>
+              </div>
+              <template class="case__details">
+                <p>Коммерческий заказ для&nbsp;карточек товаров на&nbsp;маркетплейсах: из&nbsp;реальных фото одежды собраны сеты образов на&nbsp;<span class="nowrap">AI-моделях</span>. Посадка и&nbsp;силуэт, фактуры тканей, единый свет и&nbsp;студийный фон для&nbsp;всей серии.</p>
+                <div class="gallery gallery--grid">
+                  <img src="assets/works/ai-fashion-04.jpg" width="1050" height="1400" loading="lazy" decoding="async" alt="Модель в коричневом трикотажном кардигане на молнии и чёрной плиссированной юбке" onerror="this.remove()">
+                  <img src="assets/works/ai-fashion-05.jpg" width="864" height="1400" loading="lazy" decoding="async" alt="Модель в бежевом лонгсливе и джинсах на барном стуле" onerror="this.remove()">
+                  <img src="assets/works/ai-fashion-06.jpg" width="1191" height="1321" loading="lazy" decoding="async" alt="Модель в клетчатой рубашке, джинсовых шортах и солнцезащитных очках" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+          <!-- Плакаты -->
+          <li class="reveal">
+            <article class="case" data-tilt data-context="Учебные работы" data-tools="Illustrator, Photoshop">
+              <div class="case__media">
+                <span class="case__ph" aria-hidden="true">Плакаты</span>
+                <img src="assets/works/posters.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Четыре плаката веером: Pan Do Populus, планеты, ZHDK Master Design и «1т бумаги = 10 деревьев»" onerror="this.remove()">
+              </div>
+              <div class="case__body">
+                <h3 class="case__title"><button class="case__open" type="button" aria-haspopup="dialog">Плакаты</button></h3>
+                <p class="case__desc">Типографика и&nbsp;социальный плакат</p>
+              </div>
+              <template class="case__details">
+                <p>Три типографических плаката: Pan Do Populus, планеты Солнечной системы и&nbsp;афиша ZHDK Master Design. Социальный плакат «1т бумаги = 10&nbsp;деревьев» о&nbsp;переработке макулатуры.</p>
+                <div class="gallery gallery--two">
+                  <img src="assets/works/posters-01.jpg" width="1209" height="1600" loading="lazy" decoding="async" alt="Типографический плакат Pan Do Populus: наложение синих и салатовых букв" onerror="this.remove()">
+                  <img src="assets/works/posters-02.jpg" width="1153" height="1600" loading="lazy" decoding="async" alt="Типографический плакат: названия планет по кругу на красном фоне" onerror="this.remove()">
+                  <img src="assets/works/posters-03.jpg" width="1142" height="1600" loading="lazy" decoding="async" alt="Плакат ZHDK Master Design: объёмные линейные буквы на зелёном" onerror="this.remove()">
+                  <img src="assets/works/posters-04.jpg" width="1140" height="1600" loading="lazy" decoding="async" alt="Социальный плакат «1т бумаги = 10 деревьев»: дерево из смятой газетной бумаги" onerror="this.remove()">
+                </div>
+              </template>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -615,9 +654,12 @@
       <button class="modal__close" type="button" data-close aria-label="Закрыть">
         <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
-      <p class="group__context" data-modal-type></p>
+      <p class="modal__context" data-modal-context></p>
       <h2 class="modal__title" id="modal-title" data-modal-title></h2>
-      <div data-modal-meta></div>
+      <p class="modal__sub" data-modal-sub></p>
+      <dl class="meta" data-modal-meta>
+        <div><dt>Инструменты</dt><dd data-modal-tools></dd></div>
+      </dl>
       <div class="modal__content" data-modal-content></div>
     </div>
   </dialog>

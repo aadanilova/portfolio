@@ -214,7 +214,7 @@ h4 {
 /* ---------- 3. Типографические компоненты ---------- */
 .eyebrow,
 .label,
-.group__context,
+.modal__context,
 .edu__meta {
   color: var(--accent);
   font-family: var(--font-body);
@@ -762,42 +762,6 @@ h4 {
   background: var(--tint);
 }
 
-.groups {
-  display: grid;
-  gap: clamp(3rem, 7vw, 5rem);
-}
-
-.group__head {
-  display: grid;
-  gap: 1.25rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--tint-strong);
-}
-
-@media (min-width: 56rem) {
-  .group__head {
-    grid-template-columns: 1.3fr 1fr;
-    align-items: end;
-    gap: 3rem;
-  }
-}
-
-.group__title {
-  margin-top: 0.5rem;
-  font-size: clamp(1.375rem, 3.6vw, 2.25rem);
-}
-
-.group__title--long {
-  font-size: clamp(1.25rem, 3vw, 1.875rem);
-}
-
-.group__desc {
-  max-width: 40rem;
-  margin-top: 0.75rem;
-  color: var(--muted);
-}
-
 .cases {
   display: grid;
   gap: 1.25rem;
@@ -818,6 +782,13 @@ h4 {
 
 .cases > li {
   display: flex;
+}
+
+/* Одна карточка в последнем ряду трёхколоночной сетки — по центру */
+@media (min-width: 72rem) {
+  .cases > li:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
 }
 
 .case {
@@ -1301,6 +1272,20 @@ h4 {
   line-height: 1.2;
 }
 
+.modal [hidden] {
+  display: none;
+}
+
+.modal__title + .modal__sub {
+  margin-top: -0.75rem;
+}
+
+.modal__sub {
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
 .modal .meta {
   max-width: 36rem;
   padding-top: 1rem;
@@ -1350,6 +1335,16 @@ h4 {
 
   .gallery--postcards .gallery__center {
     width: 100%;
+  }
+}
+
+.gallery--two {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 30rem) {
+  .gallery--two {
+    grid-template-columns: 1fr;
   }
 }
 
