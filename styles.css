@@ -336,7 +336,7 @@ button {
   margin-top: 0.75rem;
   display: grid;
   gap: 0.35rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-transform: none;
   letter-spacing: 0;
   color: var(--muted);
@@ -466,7 +466,7 @@ button {
 .about__media {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 1290 / 638;
   background:
     repeating-linear-gradient(135deg, transparent 0 14px, var(--ph-2) 14px 15px),
     var(--ph-1);
@@ -530,13 +530,14 @@ button {
 }
 
 .clients__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0;
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.02em;
+}
+
+.clients__list li {
+  display: inline;
 }
 
 .clients__list li:not(:last-child)::after {
@@ -554,19 +555,21 @@ button {
 /* Цифры */
 .stats {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
   margin-top: clamp(3rem, 7vw, 5rem);
 }
 
 .stat {
   display: grid;
   gap: 0.75rem;
+  align-content: start;
   padding-block: 1.5rem;
   border-top: 1px solid var(--line);
 }
 
 .stat__num {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.05em;
@@ -581,7 +584,6 @@ button {
 
 @media (min-width: 36rem) {
   .stats {
-    grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
   }
 }
