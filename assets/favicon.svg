@@ -1,9 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    .bg { fill: #6a4fd0; }
-    .fg { fill: #fff; }
-    @media (prefers-color-scheme: dark) { .bg { fill: #b9a7f5; } .fg { fill: #1c1830; } }
-  </style>
-  <rect class="bg" width="64" height="64" rx="16"/>
-  <path class="fg" d="M27.6 14h8.8L50 50h-8.6l-3-8.4H25.6L22.6 50H14L27.6 14Zm-0.1 20.6h8.9L32 22.2l-4.5 12.4Z"/>
+  <rect width="64" height="64" rx="14" fill="#161616"/>
+  <g fill="none" stroke="#ececea" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 32h41"/>
+    <path d="M39 17c1 7 5.5 12.5 13 15-7.5 2.5-12 8-13 15"/>
+  </g>
 </svg>
