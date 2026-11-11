@@ -81,14 +81,15 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
-  var formatter = new Intl.NumberFormat('ru-RU');
-
   function renderCount(el, value) {
-    el.textContent = (el.dataset.prefix || '') + formatter.format(value) + (el.dataset.suffix || '');
+    var decimals = parseInt(el.dataset.decimals || '0', 10);
+    var text = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }).format(value);
+    el.textContent = (el.dataset.prefix || '') + text + (el.dataset.suffix || '');
   }
 
   function animateCount(el) {
-    var target = parseInt(el.dataset.count, 10);
+    var target = parseFloat(el.dataset.count);
+    var factor = Math.pow(10, parseInt(el.dataset.decimals || '0', 10));
     if (isNaN(target) || el.dataset.counted) return;
     el.dataset.counted = 'true';
     if (reduceMotion.matches) {
@@ -101,7 +102,7 @@
     window.requestAnimationFrame(function step(ts) {
       if (start === null) start = ts;
       var t = Math.min((ts - start) / duration, 1);
-      renderCount(el, Math.round(target * (1 - Math.pow(1 - t, 3))));
+      renderCount(el, Math.round(target * factor * (1 - Math.pow(1 - t, 3))) / factor);
       if (t < 1) window.requestAnimationFrame(step);
     });
   }
