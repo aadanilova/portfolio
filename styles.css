@@ -435,10 +435,16 @@ button {
   transform: translateX(4px);
 }
 
-/* Мобильный hero короче: имя и роль → теги → кнопки → контакты; «Портфолио 2026» скрыт */
+/* Мобильный hero короче: имя и роль → теги → кнопки; контакты и год скрыты */
 @media (max-width: 47.99rem) {
   .hero__inner {
     padding-top: calc(var(--header-h) + 2rem);
+    padding-bottom: 2rem; /* + запас тап-зоны ссылок ≈ 48px видимых до разделителя */
+  }
+
+  /* Все капс-подписи hero одного размера */
+  .hero__col {
+    font-size: var(--fs-caption);
   }
 
   .hero__meta,
@@ -453,12 +459,12 @@ button {
 
   .hero__col--role {
     order: 2;
-    margin-top: 0.35rem;
+    margin-top: 0.25rem;
   }
 
   .hero__spec {
     order: 3;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
 
   .hero__actions {
@@ -467,22 +473,13 @@ button {
     gap: 0 1.75rem;
   }
 
-  .hero__contacts {
-    order: 5;
-    margin-top: 1.25rem;
-  }
-
-  .hero__contacts-label,
+  /* Контакты на мобильном только в блоке «Контакты»: туда ведёт «Связаться →» */
+  .hero__contacts,
   .hero__year {
     display: none;
   }
 
-  .hero__contacts ul {
-    margin-top: 0;
-  }
-
-  .link-arrow,
-  .hero__contacts li a {
+  .link-arrow {
     display: inline-flex;
     align-items: center;
     min-height: 2.75rem;
@@ -596,18 +593,27 @@ button {
 }
 
 
-/* Кадр фото: портрет 4:5, лицо в верхней трети */
+/* Кадр фото: один горизонтальный файл, обрезку делает object-fit.
+   Мобильный — 3:2; десктоп — высота равна колонке текста */
 .about__media {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
 }
 
 .about__media img {
-  object-position: 40% 20%;
+  object-position: 38% 30%;
+}
+
+@media (min-width: 48rem) {
+  .about__media {
+    align-self: stretch;
+    aspect-ratio: auto;
+    min-height: 18rem;
+  }
 }
 
 @media (min-width: 64rem) {
   .about {
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 7fr 5fr;
     gap: clamp(2rem, 4vw, 4rem);
   }
 }
