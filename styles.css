@@ -20,6 +20,12 @@
 
   --font: "Inter Tight", "Helvetica Neue", Arial, system-ui, sans-serif;
 
+  /* Типографическая шкала обычного текста: только эти четыре размера */
+  --fs-caption: 0.8125rem;                          /* 13px: капс-подписи, меню, метки */
+  --fs-small: 0.9375rem;                            /* 15px: вторичный текст, даты, подписи */
+  --fs-body: clamp(1rem, 0.6vw + 0.625rem, 1.125rem); /* 16–18px: основной текст абзацами */
+  --fs-title: 1.375rem;                             /* 22px: мелкие заголовки, клиент в карточке */
+
   --gutter: clamp(1rem, 4vw, 3rem);
   --section: clamp(3.5rem, 7vw, 6rem);
   --header-h: 3.75rem;
@@ -66,7 +72,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 400;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -170,7 +176,7 @@ button {
 .site-footer,
 .modal__context,
 .meta dt {
-  font-size: 0.8125rem;
+  font-size: var(--fs-caption);
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -365,6 +371,11 @@ button {
   margin-top: clamp(2rem, 6vw, 3.5rem);
 }
 
+.hero__col,
+.hero__contacts-label {
+  font-size: clamp(0.875rem, 1.25vw, 1.25rem);
+}
+
 .hero__col--name {
   font-weight: 600;
 }
@@ -373,13 +384,17 @@ button {
   margin-top: 0.75rem;
   display: grid;
   gap: 0.35rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-small);
+  font-weight: 500;
   text-transform: none;
   letter-spacing: 0;
   color: var(--muted);
 }
 
 .hero__contacts li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
   color: var(--text);
 }
 
@@ -393,10 +408,6 @@ button {
   display: grid;
   gap: 0.25rem;
   line-height: 1;
-}
-
-.hero__year-label {
-  font-size: clamp(0.9375rem, 1.4vw, 1.125rem);
 }
 
 .hero__year [data-year] {
@@ -413,36 +424,6 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 2rem;
-}
-
-.btn-cv {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: 2.75rem;
-  margin-top: 0.75rem;
-  padding: 0 1.1rem;
-  border: 1px solid var(--text);
-  border-radius: 999px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
-}
-
-.btn-cv:hover {
-  background: var(--text);
-  color: var(--bg);
-}
-
-.btn-cv span {
-  display: inline-block;
-  transition: transform 0.3s var(--ease);
-}
-
-.btn-cv:hover span {
-  transform: translateY(2px);
 }
 
 .link-arrow span {
@@ -570,7 +551,7 @@ button {
 
 .section__lead {
   max-width: 34rem;
-  color: var(--muted);
+  font-size: var(--fs-body);
 }
 
 .display + .entries,
@@ -588,7 +569,6 @@ button {
 .about__media {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1290 / 638;
   background:
     repeating-linear-gradient(135deg, transparent 0 14px, var(--ph-2) 14px 15px),
     var(--ph-1);
@@ -615,25 +595,19 @@ button {
   letter-spacing: -0.04em;
 }
 
-.about__lead {
-  font-size: 1.1875rem;
-  line-height: 1.45;
+
+/* Кадр фото: портрет 4:5, лицо в верхней трети */
+.about__media {
+  aspect-ratio: 4 / 5;
 }
 
-/* Мобильный кадр фото: портрет, лицо в верхней трети */
-@media (max-width: 47.99rem) {
-  .about__media {
-    aspect-ratio: 4 / 5;
-  }
-
-  .about__media img {
-    object-position: 40% 20%;
-  }
+.about__media img {
+  object-position: 40% 20%;
 }
 
 @media (min-width: 64rem) {
   .about {
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 5fr 7fr;
     gap: clamp(2rem, 4vw, 4rem);
   }
 }
@@ -672,7 +646,7 @@ button {
 .stat__label {
   max-width: 18rem;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: var(--fs-small);
 }
 
 @media (min-width: 36rem) {
@@ -752,12 +726,12 @@ button {
   align-self: start;
   padding-top: 0.35em;
   color: var(--muted);
-  font-size: 0.8125rem;
+  font-size: var(--fs-caption);
   font-variant-numeric: tabular-nums;
 }
 
 .case__title {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: var(--fs-title);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -792,7 +766,7 @@ button {
 .case__desc {
   grid-column: 1 / -1;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: var(--fs-small);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -825,13 +799,13 @@ button {
 }
 
 .rows li > span:first-child {
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
   letter-spacing: -0.01em;
 }
 
 .rows li > span:last-child {
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: var(--fs-small);
 }
 
 @media (min-width: 64rem) {
@@ -861,7 +835,6 @@ button {
 
 .entry > p:last-child {
   max-width: 40rem;
-  color: var(--muted);
 }
 
 .entry__head {
@@ -881,7 +854,7 @@ button {
 
 .entry__date {
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: var(--fs-small);
   font-variant-numeric: tabular-nums;
 }
 
@@ -898,18 +871,13 @@ button {
   .entries--3 {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .entries--3 .entry__title {
-    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
-  }
 }
 
 /* ---------- 10. Контакты и футер ---------- */
 .contact__lead {
   max-width: 30rem;
   margin-top: 1.5rem;
-  color: var(--muted);
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
 }
 
 .contact__links {
@@ -1051,7 +1019,7 @@ button {
 .modal__sub {
   margin-bottom: 1.5rem;
   color: var(--muted);
-  font-size: 1.125rem;
+  font-size: var(--fs-body);
 }
 
 .meta {
