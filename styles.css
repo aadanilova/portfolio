@@ -600,7 +600,7 @@ button {
 }
 
 .about__media img {
-  object-position: 38% 30%;
+  object-position: 55% 25%;
 }
 
 @media (min-width: 48rem) {
@@ -608,6 +608,12 @@ button {
     align-self: stretch;
     aspect-ratio: auto;
     min-height: 18rem;
+  }
+
+  /* Высоту задаёт колонка текста, а не пропорции файла */
+  .about__media img {
+    position: absolute;
+    inset: 0;
   }
 }
 
