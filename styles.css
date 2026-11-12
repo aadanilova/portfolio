@@ -1017,6 +1017,87 @@ button {
   color: var(--muted);
 }
 
+/* Баннер cookie */
+.cookie {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 60;
+  display: grid;
+  gap: 1rem;
+  max-width: 30rem;
+  margin-left: auto;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.cookie.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.cookie[hidden] {
+  display: none;
+}
+
+.cookie__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cookie__btn {
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.cookie__btn:hover {
+  border-color: var(--text);
+}
+
+.cookie__btn--primary {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+
+.cookie__btn--primary:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie {
+    transition: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .cookie {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    left: auto;
+  }
+}
+
 /* ---------- 11. Модалка ---------- */
 .modal {
   width: min(100% - 1.5rem, 60rem);

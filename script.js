@@ -11,6 +11,7 @@
   initHeader();
   initReveal();
   initModal();
+  initCookie();
 
   /* ---------- Тема: по умолчанию тёмная, светлая — по кнопке ---------- */
   function initTheme() {
@@ -200,6 +201,28 @@
         e.preventDefault();
         first.focus();
       }
+    });
+  }
+  /* ---------- Уведомление о cookie: показывается, пока не нажали «Понятно» ---------- */
+  function initCookie() {
+    var KEY = 'cookie-notice';
+    var banner = document.querySelector('[data-cookie]');
+    if (!banner) return;
+
+    try {
+      if (localStorage.getItem(KEY) === 'ok') return;
+    } catch (e) {}
+
+    banner.hidden = false;
+    requestAnimationFrame(function () {
+      banner.classList.add('is-visible');
+    });
+
+    banner.querySelector('[data-cookie-ok]').addEventListener('click', function () {
+      try {
+        localStorage.setItem(KEY, 'ok');
+      } catch (e) {}
+      banner.hidden = true;
     });
   }
 })();
