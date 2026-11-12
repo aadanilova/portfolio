@@ -593,8 +593,7 @@ button {
 }
 
 
-/* Кадр фото: один горизонтальный файл, обрезку делает object-fit.
-   Мобильный — 3:2; десктоп — высота равна колонке текста */
+/* Кадр фото: один горизонтальный файл 3:2, на всех ширинах кадр 3:2 */
 .about__media {
   aspect-ratio: 3 / 2;
 }
@@ -603,24 +602,18 @@ button {
   object-position: 55% 8%;
 }
 
+/* Десктоп: фото целиком в 3:2 (совпадает с файлом 1536×1024), колонки поровну */
 @media (min-width: 48rem) {
-  .about__media {
-    align-self: stretch;
-    aspect-ratio: auto;
-    min-height: 18rem;
-  }
-
-  /* Высоту задаёт колонка текста, а не пропорции файла */
-  .about__media img {
-    position: absolute;
-    inset: 0;
-  }
-}
-
-@media (min-width: 64rem) {
   .about {
-    grid-template-columns: 7fr 5fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
     gap: clamp(2rem, 4vw, 4rem);
+  }
+
+  .about__media {
+    align-self: start;
+    aspect-ratio: 3 / 2;
+    height: auto;
   }
 }
 
