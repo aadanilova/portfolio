@@ -600,7 +600,7 @@ button {
 }
 
 .about__media img {
-  object-position: 55% 25%;
+  object-position: 55% 8%;
 }
 
 @media (min-width: 48rem) {
