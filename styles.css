@@ -666,6 +666,63 @@ button {
   }
 }
 
+/* Компании: сетка повторяет цифры, подпись под первой колонкой, названия со второй */
+.clients {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 0.75rem;
+  column-gap: 1rem;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.clients__label {
+  color: var(--muted);
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.clients__list {
+  color: var(--text);
+  font-size: var(--fs-title);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.clients__sep {
+  color: var(--muted);
+}
+
+@media (min-width: 36rem) {
+  .clients {
+    column-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .clients {
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+  }
+
+  .clients__label {
+    grid-column: 1;
+  }
+
+  .clients__list {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .clients {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* ---------- 6. Мои работы ---------- */
 .cases {
   display: grid;
